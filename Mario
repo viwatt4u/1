@@ -1,0 +1,40 @@
+// Abstraction and scope
+
+
+#include <cs50.h>
+#include <stdio.h>
+
+int get_positive_int(string prompt);
+int i;
+
+int main(void)
+{
+do
+{
+    i = get_positive_int("Height: ");
+   
+}
+while (i>8);
+
+    for (int j = 0; j < i; j++)
+    {
+          for (int k = 0; k < j+1; k++)
+    {
+               printf("#");
+    }
+              
+              printf("\n");
+    } 
+
+}          
+// Prompt user for positive integer
+int get_positive_int(string prompt)
+{
+    int n;
+    do
+    {
+        n = get_int("%s", prompt);
+    }
+    while (n < 1);
+    return n;
+}
